@@ -1,0 +1,121 @@
+@use "../abstracts/variables" as *;
+
+.hero {
+    display: block;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-top: 60px;
+    line-height:20px;
+    &_title {
+        line-height:75px;
+        word-spacing: 1px;
+        margin-bottom: 20px;
+        font-size: 64px;
+        color: $blue;
+        max-width: 45%;
+    }
+    &_subtitle {
+        line-height:41px;
+        margin-bottom: 50px;
+        color: $gray;
+        font-size: 20px;
+        max-width: 38%;
+    }
+
+    &_woman img {
+        position: relative;
+        bottom: 596px;
+        left: 246px;
+        width: 75%;
+        
+        }
+    
+    &_buttons {
+       display: flex;
+       align-items: center;
+       width: 1000px;
+        gap: 66px;
+        margin-bottom: 100px;
+    }    
+
+    &_productos {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 50px;
+        position: relative;
+        bottom: 920px;
+        &-img {
+            width: 30%;
+            margin-bottom: 35px;
+        }
+        &-title  {
+            font-family: $primary-font;
+            font-weight: normal;
+            font-size: 33px;
+            color: $blue;
+            margin-bottom: 20px;
+        }
+        &-subtitle {
+            color: $gray;
+            max-width: 65%;
+        }
+        
+
+    }
+
+
+}
+.hero_productos li {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+  }
+
+.article{
+   
+    max-width: 18%;
+ 
+ 
+    &-1 {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 5%;
+        position: relative;
+        left: 1242px;
+        bottom: 1353px;
+        span {
+            color: $blue;
+            font-weight: bold;
+        }
+        p {
+            font-size: 16px;
+            padding: 20px;
+            margin-top: -15px;
+        }
+
+        img {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+    }  &-2 {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 5%;
+        position: relative;
+        left: 1116px;
+        bottom: 1304px;
+        span {
+            color: $blue;
+            font-weight: bold;
+        }
+        p {
+            font-size: 16px;
+            padding: 20px;
+            margin-top: -15px;
+        }
+        img {
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+    }
+}  
