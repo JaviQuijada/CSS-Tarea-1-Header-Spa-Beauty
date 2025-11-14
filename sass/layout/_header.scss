@@ -4,7 +4,8 @@
 header.header-principal {
   overflow-x: hidden;
   background-image: url(../img/imagen.png);
-  height: 67vh;
+  height: 69vh;
+  width: 168vh;
   background-repeat: no-repeat;
   background-size: 100%;
   padding-top: 33px;
@@ -27,7 +28,7 @@ header.header-principal {
   &-nav-principal {
     display: flex;
     gap: 60px;
-    font-size: 18px;
+    font-size: 16px;
     margin-left: -63px;
     @include breakpoint(desktop) {
       gap: 40px;
@@ -44,21 +45,23 @@ header.header-principal {
   }
 
   &-nav-segundary {
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     align-items: center;
-    gap: 65px;
-    margin-right: 165px;
+    gap: 60px;
+    margin-right: 130px;
     @include breakpoint(desktop) {
-      margin-right: 0;
+      margin-right: 88px;
+      gap: 0;
     }
 
     &-icon {
       display: flex;
-      gap: 45px;
+      gap: 25px;
+      width: 120px;
       img {
         @include breakpoint(desktop) {
-          width: 30px;
+          width: 26px;
         }
       }
     }
@@ -67,6 +70,10 @@ header.header-principal {
       display: flex;
       align-items: center;
       gap: 45px;
+      @include breakpoint(desktop) {
+        gap: 15px;
+      }
+      
       a {
         @include breakpoint(desktop) {
           font-size: 16px;
