@@ -7,8 +7,13 @@
   padding-left: 163px;
   margin-top: -700px;
   line-height: 20px;
+  position: relative;
+  left: 20px;
   @include breakpoint(desktop) {
     margin-top: -612px;
+  }
+  @include breakpoint(smalldesktop) {
+    margin-top: -727px;
   }
   &_title {
     line-height: 75px;
@@ -21,6 +26,14 @@
     @include breakpoint(desktop) {
       font-size: 48px;
       line-height: 60px;
+    }
+    @include breakpoint(smalldesktop) {
+      font-size: 38px;
+      line-height: 35px;
+      position: relative;
+      top: 208px;
+      max-width: 39%;
+      margin-bottom: 39px;
     }
   }
   &_subtitle {
@@ -35,17 +48,30 @@
       line-height: 30px;
       margin-bottom: 45px;
     }
+    @include breakpoint(smalldesktop) {
+      font-size: 13px;
+      max-width: 37%;
+      line-height: 19px;
+      margin-bottom: 66px;
+      position: relative;
+      top: 205px;
+    }
   }
 
   &_woman img {
     position: relative;
-    bottom: 585px;
-    left: 222px;
-    width: 80%;
+    bottom: 600px;
+    left: 215px;
+    width: 86%;
     @include breakpoint(desktop) {
-      bottom: 636px;
-        left: 214px;
-        width: 86%;
+      bottom: 652px;
+      left: 132px;
+      width: 87%;
+    }
+    @include breakpoint(smalldesktop) {
+      bottom: 197px;
+      left: 108px;
+      width: 87%;
     }
   }
 
@@ -53,10 +79,17 @@
     display: flex;
     align-items: center;
     gap: 52px;
-    margin-bottom: 43px;
     @include breakpoint(desktop) {
       margin-bottom: 208px;
       gap: 45px;
+    }
+    @include breakpoint(smalldesktop) {
+      position: relative;
+      top: 171px;
+      a {
+        font-size: 12px;
+      }
+      font-size: 12px;
     }
   }
 
@@ -66,16 +99,27 @@
     align-items: center;
     gap: 30px;
     position: relative;
-    bottom: 900px;
+    bottom: 929px;
     background-color: white;
     @include breakpoint(desktop) {
       gap: 10px;
+      bottom: 909px;
+      padding-top: 24px;
+    }
+    @include breakpoint(smalldesktop) {
+      gap: 10px;
+      bottom: 423px;
+      padding-top: 24px;
+      width: 28%;
+      padding-top: 12px;
     }
     &-img {
       width: 30%;
       margin-bottom: 26px;
+      position: relative;
       @include breakpoint(desktop) {
         width: 27%;
+        margin-bottom: 26px;
       }
     }
     &-title {
@@ -84,10 +128,23 @@
       font-size: 33px;
       color: $blue;
       margin-bottom: 26px;
+      @include breakpoint(desktop) {
+        font-size: 30px;
+      }
+      @include breakpoint(smalldesktop) {
+        font-size: 24px;
+      }
     }
     &-subtitle {
       color: $gray;
       max-width: 65%;
+      @include breakpoint(desktop) {
+        font-size: 14px;
+      }
+      @include breakpoint(smalldesktop) {
+        font-size: 12px;
+        max-width: 100%;
+      }
     }
   }
 }
@@ -100,67 +157,108 @@
 
 .article {
   margin-top: 10px;
+  position: relative;
+  left: 83px;
+  bottom: 26px;
+  @include breakpoint(desktop) {
+    left: -55px;
+    bottom: -14px;
+  }
+  @include breakpoint(smalldesktop) {
+    left: -371px;
+    bottom: -491px;
+  }
   &-1 {
-    width: 358px;
-    height: 200px;
+    width: 397px;
+    height: 218px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5%;
     position: relative;
     left: 1369px;
-    bottom: 1346px;
+    bottom: 1385px;
     @include breakpoint(desktop) {
       width: 318px;
       height: 168px;
       left: 1140px;
       bottom: 1278px;
     }
+    @include breakpoint(smalldesktop) {
+      width: 280px;
+      height: 148px;
+      left: 1340px;
+      bottom: 1260px
+    }
     span {
       color: $blue;
       font-weight: bold;
     }
     p {
-      font-size: 16px;
+      font-size: 18px;
       padding: 20px;
       margin-top: -37px;
       @include breakpoint(desktop) {
         font-size: 14px;
+      }
+      @include breakpoint(smalldesktop) {
+        font-size: 12px;
       }
     }
 
     img {
       padding: 15px 20px;
       width: 65px;
+      @include breakpoint(smalldesktop) {
+        width: 60px;
+        padding: 10px 20px;
+
+
+      }
     }
   }
   &-2 {
-    width: 358px;
-    height: 200px;
+    width: 397px;
+    height: 218px;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5%;
     position: relative;
     left: 1251px;
-    bottom: 1265px;
+    bottom: 1286px;
     @include breakpoint(desktop) {
       width: 318px;
       height: 168px;
       left: 1032px;
       bottom: 1217px;
     }
+    @include breakpoint(smalldesktop) {
+      width: 280px;
+      height: 148px;
+      left: 1244px;
+      bottom: 1195px;
+    }
     span {
       color: $blue;
       font-weight: bold;
     }
     p {
-      font-size: 16px;
+      font-size: 18px;
       padding: 20px;
       margin-top: -37px;
       @include breakpoint(desktop) {
         font-size: 14px;
       }
+      @include breakpoint(smalldesktop) {
+        font-size: 12px;
+      }
     }
     img {
       width: 65px;
       padding: 15px 20px;
+      @include breakpoint(smalldesktop) {
+        width: 60px;
+        padding: 10px 20px;
+
+
+      }
     }
   }
 }
