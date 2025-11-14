@@ -4,24 +4,6 @@ html * {
   font-family: $primary-font;
 }
 
-body {
-  overflow-x: hidden;
-  background-image: url(../img/imagen.png);
-  height: 71vh;
-
-  background-repeat: no-repeat;
-  
-  background-size: 87%;
-
-}
-
-.contenedor-principal {
-
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
 a {
   text-decoration: none;
   color: $blue;

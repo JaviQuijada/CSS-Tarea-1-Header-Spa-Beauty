@@ -13,126 +13,195 @@
   padding: 16px 34px;
 }
 
-.logo img {
-  width: 100%;
+header.header-principal {
+  overflow-x: hidden;
+  background-image: url(../img/imagen.png);
+  height: 67vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 33px;
+  padding-left: 163px;
 }
 
-header.header-principal .container {
-  width: 100%;
-  position: relative;
-  margin-bottom: 70px;
-  margin-left: 60px;
-  display: flex;
-  justify-content: space-between;
-}
-header.header-principal .container .logo {
-  width: 250px;
-}
-
-.nav_principal > ul {
+.container_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 51px;
+}
+.container_header-logo img {
+  width: 212px;
+}
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .container_header-logo img {
+    width: 150px;
+  }
+}
+.container_header-nav-principal {
+  display: flex;
+  gap: 60px;
   font-size: 18px;
-  font-weight: 300;
-  position: relative;
-  right: 200px;
+  margin-left: -63px;
 }
-
-.nav_principal-desplegable-submenu {
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .container_header-nav-principal {
+    gap: 40px;
+    font-size: 16px;
+  }
+}
+.container_header-nav-principal-desplegable-submenu {
   display: none;
+  position: absolute;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.nav_principal-desplegable-submenu .nav_principal-desplegable-submenu:hover {
-  display: block;
-}
-
-.nav_segundary ul,
-.nav_segundary {
+.container_header-nav-segundary {
+  font-size: 18px;
   display: flex;
-  justify-content: space-between;
-  text-align: center;
-  gap: 30px;
-}
-.nav_segundary ul .nav_segundary-icon,
-.nav_segundary .nav_segundary-icon {
-  position: relative;
-  right: 410px;
-}
-.nav_segundary ul .nav_segundary-login,
-.nav_segundary .nav_segundary-login {
-  width: 231px;
-  position: relative;
-  right: 370px;
-  bottom: 15px;
   align-items: center;
+  gap: 65px;
+  margin-right: 165px;
 }
-.nav_segundary ul .nav_segundary-login-up,
-.nav_segundary .nav_segundary-login-up {
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .container_header-nav-segundary {
+    margin-right: 0;
+  }
+}
+.container_header-nav-segundary-icon {
+  display: flex;
+  gap: 45px;
+}
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .container_header-nav-segundary-icon img {
+    width: 30px;
+  }
+}
+.container_header-nav-segundary-login {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .container_header-nav-segundary-login a {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+}
+.container_header-nav-segundary-login a.nav_segundary-login-up {
+  display: inline-block;
+  background-color: rgb(38, 64, 101);
+  border-radius: 28px;
+  color: white;
+  padding: 16px 34px;
   display: inline-block;
   background-color: rgb(38, 64, 101);
   border-radius: 28px;
   color: white;
   padding: 16px 40px;
 }
-.nav_segundary ul .nav_segundary-login-in,
-.nav_segundary .nav_segundary-login-in {
-  text-decoration: underline;
+
+#menu-toggle {
+  color: rgb(38, 64, 101);
+}
+
+#menu-toggle:checked + label + .container_header-nav-principal-desplegable-submenu {
+  display: block;
 }
 
 .hero {
   display: block;
   justify-content: space-between;
-  margin-left: 60px;
-  margin-top: 60px;
+  padding-left: 163px;
+  margin-top: -700px;
   line-height: 20px;
 }
 .hero_title {
   line-height: 75px;
   word-spacing: 1px;
-  margin-bottom: 20px;
+  margin-top: 100px;
+  margin-bottom: 25px;
   font-size: 64px;
   color: rgb(38, 64, 101);
   max-width: 45%;
 }
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .hero_title {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 24px;
+  }
+}
 .hero_subtitle {
   line-height: 41px;
-  margin-bottom: 50px;
+  margin-bottom: 55px;
   color: rgb(144, 144, 144);
-  font-size: 20px;
-  max-width: 38%;
+  font-size: 24px;
+  max-width: 43%;
+}
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .hero_subtitle {
+    font-size: 18px;
+    max-width: 47%;
+    line-height: 28px;
+    margin-bottom: 35px;
+  }
 }
 .hero_woman img {
   position: relative;
-  bottom: 596px;
-  left: 246px;
+  bottom: 660px;
+  left: 351px;
   width: 75%;
+}
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .hero_woman img {
+    bottom: 660px;
+    left: 351px;
+    width: 75%;
+  }
 }
 .hero_buttons {
   display: flex;
   align-items: center;
   width: 1000px;
-  gap: 66px;
-  margin-bottom: 100px;
+  gap: 52px;
+  margin-bottom: 113px;
+}
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .hero_buttons {
+    margin-bottom: 208px;
+    gap: 45px;
+  }
 }
 .hero_productos {
+  width: 41%;
   display: flex;
   align-items: center;
-  justify-content: start;
-  gap: 50px;
+  gap: 70px;
   position: relative;
   bottom: 920px;
+  background-color: white;
+  padding: 20px;
+}
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .hero_productos {
+    gap: 10px;
+  }
 }
 .hero_productos-img {
   width: 30%;
-  margin-bottom: 35px;
+  margin-bottom: 26px;
+}
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .hero_productos-img {
+    width: 27%;
+  }
 }
 .hero_productos-title {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-size: 33px;
   color: rgb(38, 64, 101);
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 }
 .hero_productos-subtitle {
   color: rgb(144, 144, 144);
@@ -150,10 +219,12 @@ header.header-principal .container .logo {
   max-width: 18%;
 }
 .article-1 {
+  width: 409px;
+  height: 224px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 5%;
   position: relative;
-  left: 1242px;
+  left: 1440px;
   bottom: 1353px;
 }
 .article-1 span {
@@ -170,10 +241,12 @@ header.header-principal .container .logo {
   margin-left: 20px;
 }
 .article-2 {
+  width: 409px;
+  height: 224px;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 5%;
   position: relative;
-  left: 1116px;
+  left: 1299px;
   bottom: 1304px;
 }
 .article-2 span {
@@ -192,20 +265,6 @@ header.header-principal .container .logo {
 
 html * {
   font-family: "Poppins", sans-serif;
-}
-
-body {
-  overflow-x: hidden;
-  background-image: url(../img/imagen.png);
-  height: 71vh;
-  background-repeat: no-repeat;
-  background-size: 87%;
-}
-
-.contenedor-principal {
-  margin-top: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
 }
 
 a {

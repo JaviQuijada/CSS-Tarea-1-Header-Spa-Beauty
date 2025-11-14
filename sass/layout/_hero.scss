@@ -1,121 +1,149 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .hero {
-    display: block;
-    justify-content: space-between;
-    margin-left: 60px;
-    margin-top: 60px;
-    line-height:20px;
-    &_title {
-        line-height:75px;
-        word-spacing: 1px;
-        margin-bottom: 20px;
-        font-size: 64px;
-        color: $blue;
-        max-width: 45%;
+  display: block;
+  justify-content: space-between;
+  padding-left: 163px;
+  margin-top: -700px;
+  line-height: 20px;
+  &_title {
+    line-height: 75px;
+    word-spacing: 1px;
+    margin-top: 100px;
+    margin-bottom: 25px;
+    font-size: 64px;
+    color: $blue;
+    max-width: 45%;
+    @include breakpoint(desktop) {
+      font-size: 50px;
+      line-height: 60px;
+      margin-bottom: 24px;
     }
-    &_subtitle {
-        line-height:41px;
-        margin-bottom: 50px;
-        color: $gray;
-        font-size: 20px;
-        max-width: 38%;
+  }
+  &_subtitle {
+    line-height: 41px;
+    margin-bottom: 55px;
+    color: $gray;
+    font-size: 24px;
+    max-width: 43%;
+    @include breakpoint(desktop) {
+      font-size: 18px;
+      max-width: 47%;
+      line-height: 28px;
+      margin-bottom: 35px;
     }
-
-    &_woman img {
-        position: relative;
-        bottom: 596px;
-        left: 246px;
-        width: 75%;
-        
-        }
-    
-    &_buttons {
-       display: flex;
-       align-items: center;
-       width: 1000px;
-        gap: 66px;
-        margin-bottom: 100px;
-    }    
-
-    &_productos {
-        display: flex;
-        align-items: center;
-        justify-content: start;
-        gap: 50px;
-        position: relative;
-        bottom: 920px;
-        &-img {
-            width: 30%;
-            margin-bottom: 35px;
-        }
-        &-title  {
-            font-family: $primary-font;
-            font-weight: normal;
-            font-size: 33px;
-            color: $blue;
-            margin-bottom: 20px;
-        }
-        &-subtitle {
-            color: $gray;
-            max-width: 65%;
-        }
-        
-
-    }
-
-
-}
-.hero_productos li {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    text-align: center; 
   }
 
-.article{
-   
-    max-width: 18%;
- 
- 
-    &-1 {
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 5%;
-        position: relative;
-        left: 1242px;
-        bottom: 1353px;
-        span {
-            color: $blue;
-            font-weight: bold;
-        }
-        p {
-            font-size: 16px;
-            padding: 20px;
-            margin-top: -15px;
-        }
-
-        img {
-            margin-top: 20px;
-            margin-left: 20px;
-        }
-    }  &-2 {
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 5%;
-        position: relative;
-        left: 1116px;
-        bottom: 1304px;
-        span {
-            color: $blue;
-            font-weight: bold;
-        }
-        p {
-            font-size: 16px;
-            padding: 20px;
-            margin-top: -15px;
-        }
-        img {
-            margin-top: 20px;
-            margin-left: 20px;
-        }
+  &_woman img {
+    position: relative;
+    bottom: 660px;
+    left: 351px;
+    width: 75%;
+    @include breakpoint(desktop) {
+    bottom: 660px;
+    left: 351px;
+    width: 75%;
     }
-}  
+  }
+
+  &_buttons {
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    gap: 52px;
+    margin-bottom: 113px;
+    @include breakpoint(desktop) {
+      margin-bottom: 208px;
+      gap: 45px;
+    }
+  }
+
+  &_productos {
+    width: 41%;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    position: relative;
+    bottom: 920px;
+    background-color: white;
+    padding: 20px ;
+    @include breakpoint(desktop) {
+      gap: 10px;
+    }
+    &-img {
+      width: 30%;
+      margin-bottom: 26px;
+      @include breakpoint(desktop) {
+        width: 27%;
+      }
+    }
+    &-title {
+      font-family: $primary-font;
+      font-weight: normal;
+      font-size: 33px;
+      color: $blue;
+      margin-bottom: 26px;
+    }
+    &-subtitle {
+      color: $gray;
+      max-width: 65%;
+    }
+  }
+}
+.hero_productos li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.article {
+  max-width: 18%;
+
+  &-1 {
+    width: 409px;
+    height: 224px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5%;
+    position: relative;
+    left: 1440px;
+    bottom: 1353px;
+    span {
+      color: $blue;
+      font-weight: bold;
+    }
+    p {
+      font-size: 16px;
+      padding: 20px;
+      margin-top: -15px;
+    }
+
+    img {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+  }
+  &-2 {
+    width: 409px;
+    height: 224px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5%;
+    position: relative;
+    left: 1299px;
+    bottom: 1304px;
+    span {
+      color: $blue;
+      font-weight: bold;
+    }
+    p {
+      font-size: 16px;
+      padding: 20px;
+      margin-top: -15px;
+    }
+    img {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+  }
+}

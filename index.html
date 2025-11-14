@@ -28,22 +28,24 @@
   </head>
 
   <body>
-    <div class="contenedor-principal">
-      <header class="header-principal">
-        <div class="container">
-          <a href="#" class="logo">
+    <header class="header-principal">
+
+        <div class="container_header">
+          <a href="#" class="container_header-logo">
             <img src="./img/logo.svg" alt="Logotipo" />
           </a>
 
-          <nav class="nav_principal">
-            <ul>
+          <nav >
+            <ul class="container_header-nav-principal">
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
-              <li><a href="#">Service</a></li>
+              <li><a href="#">Services</a></li>
               <li><a href="#">Facilites</a></li>
-              <li class="nav_principal-desplegable">
-                <a href="#">More: &#x25BC;</a>
-                <ul class="nav_principal-desplegable-submenu">
+              <li class="container_header-nav-principal-desplegable">
+                <input type="checkbox" id="menu-toggle" hidden>
+                <label for="menu-toggle">More ▼</label>
+              
+                <ul class="container_header-nav-principal-desplegable-submenu">
                   <li><a href="#">Option 1</a></li>
                   <li><a href="#">Option 2</a></li>
                   <li><a href="#">Option 3</a></li>
@@ -52,8 +54,10 @@
               </li>
             </ul>
           </nav>
-          <nav class="nav_segundary">
-            <ul class="nav_segundary-icon">
+
+
+          <nav class="container_header-nav-segundary">
+            <ul class="container_header-nav-segundary-icon">
               <li>
                 <a href="#"><img src="./img/search.svg" alt="" /></a>
               </li>
@@ -61,7 +65,8 @@
                 <a href="#"><img src="./img/car.svg" alt="" /></a>
               </li>
             </ul>
-            <ul class="nav_segundary-login">
+            
+            <ul class="container_header-nav-segundary-login">
               <li><a class="nav_segundary-login-in"href="#">Sign In</a></li>
               <li><a class="nav_segundary-login-up" href="#">Sign Up</a></li>
             </ul>

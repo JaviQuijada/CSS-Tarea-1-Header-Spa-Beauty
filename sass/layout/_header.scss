@@ -1,71 +1,96 @@
 @use "../abstracts/variables" as *;
-.logo img {
-  width: 100%;
+@use "../abstracts/mixins" as *;
+
+header.header-principal {
+  overflow-x: hidden;
+  background-image: url(../img/imagen.png);
+  height: 67vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-top: 33px;
+  padding-left: 163px;
 }
 
-header.header-principal .container {
-  width: 100%;
-  position: relative;
-  margin-bottom: 70px;
-  margin-left: 60px;
-  display: flex;
-  justify-content: space-between;
-  .logo {
-    width: 250px;
-  }
-}
-
-.nav_principal > ul {
+.container_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 51px;
-  font-size: 18px;
-  font-weight: 300;
-  position: relative;
-  right: 200px;
-}
 
-.nav_principal-desplegable-submenu {
-  display: none;
-  .nav_principal-desplegable-submenu:hover {
-    display: block;
+  &-logo {
+    img {
+      width: 212px;
+      @include breakpoint(desktop) {
+        width: 150px;
+      }
+    }
   }
-}
-
-.nav_segundary ul,
-.nav_segundary {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  gap: 30px;
+  &-nav-principal {
+    display: flex;
+    gap: 60px;
+    font-size: 18px;
+    margin-left: -63px;
+    @include breakpoint(desktop) {
+      gap: 40px;
+      font-size: 16px;
+    }
  
-  .nav_segundary-icon {
-    position: relative;
-    right: 410px;
-    
-    
+    &-desplegable-submenu {
+      display: none;
+      position: absolute;
+      background: white;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
   }
-  .nav_segundary-login {
-    width: 231px;
-    position: relative;
-    right: 370px;
-    bottom: 15px;
+
+  &-nav-segundary {
+    font-size: 18px;
+    display: flex;
     align-items: center;
-    
-   
-    &-up {
-      //@include button();
-      display: inline-block;
-      background-color: $blue;
-      border-radius: 28px;
-      color: white;
-      padding: 16px 40px;
-      
+    gap: 65px;
+    margin-right: 165px;
+    @include breakpoint(desktop) {
+      margin-right: 0;
     }
-    &-in {
-      text-decoration: underline;
+
+    &-icon {
+      display: flex;
+      gap: 45px;
+      img {
+        @include breakpoint(desktop) {
+          width: 30px;
+        }
+      }
+    }
+
+    &-login {
+      display: flex;
+      align-items: center;
+      gap: 45px;
+      a {
+        @include breakpoint(desktop) {
+          font-size: 16px;
+          margin-right: 20px;
+        }
+      }
+      a.nav_segundary-login-up {
+        @include button();
+        display: inline-block;
+        background-color: $blue;
+        border-radius: 28px;
+        color: white;
+        padding: 16px 40px;
+      }
     }
   }
-  
+}
+
+#menu-toggle{
+  color: $blue;
+}
+
+#menu-toggle:checked
+  + label
+  + .container_header-nav-principal-desplegable-submenu {
+  display: block;
 }
