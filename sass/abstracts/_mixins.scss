@@ -18,31 +18,39 @@
     }
   }  
   @else if $point == tablet {
-    @media (max-width: 1024px) and (min-width: 768px) {
+    @media (max-width: 1024px) and (min-width: 767px) {
       @content;
     }
   }
-   @else if $point == tabletmobile {
-    @media (max-width: 1024px) and (min-width: 320px) {
+   @else if $point == tabletvertical {
+    @media (max-width: 768px) and (min-width: 376px) {
       @content;
     }
   } 
-    @else if $point == mobileandrotate {
+ 
+    @else if $point == mobile {
+    @media (max-width: 375px) and (min-width: 320px) {
+      @content;
+    }
+  }
+
+
+  //------------------------------
+
+  @else if $point == mobileandrotate {
     @media (max-width: 767px) and (min-width: 320px) {
       @content;
     }
   } 
-    @else if $point == mobilerotate {
-    @media (max-width: 767px) and (min-width: 479px) {
-      @content;
-    }
-  }
-   @else if $point == mobile {
+
+  @else if $point == mobileiphone {
     @media (max-width: 480px) and (min-width: 320px) {
       @content;
     }
   }
-   @else if $point == smallmobile {
+
+   
+  @else if $point == smallmobile {
     @media (max-width: 650px) and (min-width: 568px) {
       @content;
     }
@@ -59,7 +67,7 @@
   background-color: $blue;
   border-radius: 28px;
   color: white;
-  padding: 16px 34px;
+  padding: 10px 34px;
   @include breakpoint(smalldesktop) {
     padding: 12px 30px;
 

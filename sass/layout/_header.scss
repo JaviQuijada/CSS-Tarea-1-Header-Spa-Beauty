@@ -2,22 +2,9 @@
 @use "../abstracts/mixins" as *;
 
 header.header-principal {
-  overflow-x: hidden;
-  background-image: url(../img/imagen.png);
-  height: 75vh;
-  width: 178vh;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  padding-top: 33px;
-  padding-left: 163px;
-  @include breakpoint(desktop) {
-    height: 69vh;
-    width: 160vh;
-  }
-  @include breakpoint(smalldesktop) {
-    height: 75vh;
-    width: 178vh;
-  }
+  padding-top: 30px;
+  padding-left: 124px;
+
 }
 
 .container_header {
@@ -26,33 +13,19 @@ header.header-principal {
   align-items: center;
 
   &-logo {
-    margin-left: 20px;
     img {
-      width: 212px;
-      @include breakpoint(desktop) {
-        width: 150px;
-      }
-      @include breakpoint(smalldesktop) {
-        width: 130px;
-      }
+      width: 180px;
+   
     }
   }
   &-nav-principal {
     display: flex;
-    gap: 60px;
+    gap: 50px;
     font-size: 16px;
-    margin-left: -63px;
-    @include breakpoint(desktop) {
-      gap: 40px;
-      font-size: 14px;
-    }
-    @include breakpoint(smalldesktop) {
-      gap: 39px;
-      font-size: 12px;
-      margin-left: -65px;
+    font-weight: 100;
+    margin-left: -35px;
 
-    }
-
+  
     &-desplegable-submenu {
       display: none;
       position: absolute;
@@ -66,61 +39,38 @@ header.header-principal {
     font-size: 16px;
     display: flex;
     align-items: center;
-    gap: 33px;
-    margin-right: 177px;
+    gap: 40px;
+    margin-right: 246px;
 
-    @include breakpoint(desktop) {
-      font-size: 14px;
-      margin-right: 59px;
-    }
-    @include breakpoint(smalldesktop) {
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      margin-right: 248px;
-      gap: 0;
-    }
+   
 
     &-icon {
       display: flex;
       gap: 25px;
-      width: 100px;
+      position: relative;
+      left: 65px;
       img {
-        @include breakpoint(desktop) {
-          width: 26px;
-        }
-        @include breakpoint(smalldesktop) {
-          width: 17px;
-        }
+        width: 25px;
+     
       }
     }
 
     &-login {
       display: flex;
       align-items: center;
-      gap: 45px;
-      @include breakpoint(smalldesktop) {
-        margin-right: -130px;
-        gap: 20px;
-      }
+      gap: 30px;
+      position: relative;
+      left: 65px;
+     
 
       a {
-        @include breakpoint(desktop) {
-          font-size: 14px;
-          margin-right: 13px;
-        }
-        @include breakpoint(smalldesktop) {
-          font-size: 12px;
-          margin-right: 0px;
-        }
+        font-size: 16px;
+        font-weight: 100;
+
+    
       }
       a.nav_segundary-login-up {
         @include button();
-        display: inline-block;
-        background-color: $blue;
-        border-radius: 28px;
-        color: white;
-        padding: 16px 40px;
      
       }
       a.nav_segundary-login-in {

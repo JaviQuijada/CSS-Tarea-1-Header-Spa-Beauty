@@ -1,7 +1,20 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
 
 html * {
   font-family: $primary-font;
+}
+body {
+  @include breakpoint(largedesktop) {
+
+  }
+  overflow-x: hidden;
+  background-image: url(../img/imagen.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
 }
 
 a {
