@@ -10,17 +10,13 @@
 
   &_text {
     &_title {
-      line-height: 75px;
       font-size: 55px;
       color: $blue;    
   }
 
     &_subtitle {
-      line-height: 41px;
-      margin-bottom: 55px;
       color: $gray;
       font-size: 24px;
-      max-width: 43%;
   }
 
     &_buttons {
@@ -28,7 +24,6 @@
       align-items: center;
       gap: 52px;
       font-size: 16px;
-      font-weight: 100;
   
   }
     
@@ -61,12 +56,10 @@
     }
   }
   
-  &_woman img {
-    position: relative;
-    bottom: 625px;
-    left: 184px;
-    width: 76%;
-  }
+}
+&_woman img {
+  position: relative;
+  width: 100%;
 }
 
 .hero_productos li {

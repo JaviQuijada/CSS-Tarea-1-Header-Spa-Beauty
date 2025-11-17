@@ -104,23 +104,18 @@ header.header-principal {
   line-height: 20px;
 }
 .hero_text_title {
-  line-height: 75px;
   font-size: 55px;
   color: rgb(38, 64, 101);
 }
 .hero_text_subtitle {
-  line-height: 41px;
-  margin-bottom: 55px;
   color: rgb(144, 144, 144);
   font-size: 24px;
-  max-width: 43%;
 }
 .hero_text_buttons {
   display: flex;
   align-items: center;
   gap: 52px;
   font-size: 16px;
-  font-weight: 100;
 }
 .hero_text_productos {
   width: 35%;
@@ -145,11 +140,9 @@ header.header-principal {
   color: rgb(144, 144, 144);
   max-width: 65%;
 }
-.hero_text_woman img {
+.hero_woman img {
   position: relative;
-  bottom: 625px;
-  left: 184px;
-  width: 76%;
+  width: 100%;
 }
 .hero .hero_productos li {
   display: flex;
