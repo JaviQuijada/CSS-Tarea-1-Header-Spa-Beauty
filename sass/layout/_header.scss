@@ -23,17 +23,39 @@ header.header-principal {
     display: flex;
     gap: 50px;
     font-size: 16px;
-    font-weight: 100;
-    margin-left: -35px;
+    position: relative;
+    overflow: visible;
 
-  
-    &-desplegable-submenu {
-      display: none;
-      position: absolute;
-      background: white;
-      padding: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
+    &-desplegable {
+      color: $blue;
+      position: relative;
+      z-index: 10;
+
+      #menu-toggle {
+        position: absolute;
+        left: -9999px; 
+      }
+
+      label {
+        cursor: pointer;
+        user-select: none;
+      }
+
+      .container_header-nav-principal-desplegable-submenu {
+        display: none;
+        position: absolute;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        margin-top: 10px;
+        z-index: 20;
+
+      }
+
+      #menu-toggle:checked ~ .container_header-nav-principal-desplegable-submenu {
+        display: block;
+      }
+    } 
   }
 
   &-nav-segundary {
@@ -81,12 +103,6 @@ header.header-principal {
   }
 }
 
-#menu-toggle {
-  color: $blue;
-}
 
-#menu-toggle:checked
-  + label
-  + .container_header-nav-principal-desplegable-submenu {
-  display: block;
-}
+
+
